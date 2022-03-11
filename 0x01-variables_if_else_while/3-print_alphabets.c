@@ -7,8 +7,8 @@
 int main(void)
 {
 	int x, y;
-	
-	for (x = 97; x<= 122; x++)
+
+	for (x = 97; x <= 122; x++)
 	{
 		putchar(x);
 	}
