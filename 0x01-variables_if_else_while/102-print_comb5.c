@@ -9,7 +9,7 @@
 int main(void)
 {
 	int p = 48, q = 48, y = 48, x = 49;
-
+	
 	while (p < 58)
 	{
 		while (q < 58)
@@ -43,7 +43,7 @@ int main(void)
 		p++;
 		q = 48;
 		y = p;
-		x = q+ 1;
+		x = q + 1;
 	}
 	putchar('\n');
 	return (0);
