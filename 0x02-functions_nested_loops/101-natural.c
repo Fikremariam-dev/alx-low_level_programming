@@ -1,43 +1,28 @@
-#include <stdio.h>
-
+#include<stdio.h>
 /**
- * main - sums 3-5_cous - Entry point
+ * main - count multiple.
  *
- * Return:  (0)
+ * Return:void
  */
-
 int main(void)
 {
-	int i = 0;
-	int m3 = 3;
-	int m5 = 5;
-	int sum = 0;
-	int lim = 1024;
+	int a, b, s, x, y;
 
-	while (i == 0)
+	s = 0;
+	for (a = 0; a <= (1024  / 3); a++)
 	{
-
-		if (m3 < lim)
+		y = a * 3;
+		s = s + y;
+	}
+	for (b = 0; b < (1024 / 5); b++)
+	{
+		if (!(b % 3 == 0))
 		{
-			sum += m3;
-			m3 += 3;
-		}
-
-		if (m5 < lim && (m5 % 3) != 0)
-		{
-			sum += m5;
-			m5 += 5;
-		}
-		else if (m5 % 3 == 0)
-		{
-			m5 += 5;
-		}
-
-		if (m3 >= lim && m5 >= lim)
-		{
-			i = 1;
+			x = b * 5;
+			s = s + x;
 		}
 	}
-	printf("%d\n", sum);
+	printf("%i\n", s);
+
 	return (0);
 }

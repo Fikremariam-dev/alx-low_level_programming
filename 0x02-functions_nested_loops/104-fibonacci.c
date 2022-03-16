@@ -1,47 +1,41 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - fibonacci <3
+ * main - first 50 fibonatchi.
  *
- * Purpose - no hardcode
- *
- * Return:  (Success)
+ * Return: void.
  */
-
 int main(void)
 {
-	unsigned long int i;
-	unsigned long int bef = 1;
-	unsigned long int aft = 2;
-	unsigned long int l = 1000000000;
-	unsigned long int bef1;
-	unsigned long int bef2;
-	unsigned long int aft1;
-	unsigned long int aft2;
+	unsigned long int i, i0, i1, j, j0, j1, e, e0, e1, y, k;
 
-	printf("%lu", bef);
+	i = 1;
+	j = 2;
+	e = i + j;
 
-	for (i = 1; i < 91; i++)
+	printf("%lu, ", i);
+	printf("%lu, ", j);
+	for (y = 3; y < 89; y++)
 	{
-		printf(", %lu", aft);
-		aft += bef;
-		bef = aft - bef;
+		printf("%lu, ", e);
+		i = j;
+		j = e;
+		e = i + j;
 	}
-
-	bef1 = (bef / l);
-	bef2 = (bef % l);
-	aft1 = (aft / l);
-	aft2 = (aft % l);
-
-	for (i = 92; i < 99; ++i)
+	j0 = j / 1000000000;
+	j1 = j % 1000000000;
+	e0 = e / 1000000000;
+	e1 = e % 1000000000;
+	for (k = 89; k < 98; k++)
 	{
-		printf(", %lu", aft1 + (aft2 / l));
-		printf("%lu", aft2 % l);
-		aft1 = aft1 + bef1;
-		bef1 = aft1 - bef1;
-		aft2 = aft2 + bef2;
-		bef2 = aft2 - bef2;
+		printf("%lu%lu, ", e0, e1);
+		i0 = j0;
+		i1 = j1;
+		j0 = e0;
+		j1 = e1;
+		e0 = i0 + j0 + ((i1 + j1) / 1000000000);
+		e1 = (i1 + j1) % 1000000000;
 	}
-	printf("\n");
+printf("%lu%lu\n", e0, e1);
 	return (0);
 }

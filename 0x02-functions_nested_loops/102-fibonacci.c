@@ -1,26 +1,27 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - fibonacci 50
+ * main - first 50 fibonatchi.
  *
- *
- * Return:  (Success)
+ * Return: void.
  */
-
 int main(void)
 {
-	unsigned long int i;
-	unsigned long int bef = 1;
-	unsigned long int aft = 2;
+	long int a, b, s, i;
 
-	printf("%lu", bef);
-
-	for (i = 1; i < 50; i++)
+	a = 1;
+	b = 2;
+	s = 3;
+	printf("%ld, ", a);
+	printf("%ld, ", b);
+	for (i = 3; i < 50; i++)
 	{
-		printf(", %lu", aft);
-		aft += bef;
-		bef = aft - bef;
+		printf("%ld, ", s);
+		a = b;
+		b = s;
+		s = a + b;
 	}
-	printf("\n");
+	printf("%ld\n", s);
+
 	return (0);
 }

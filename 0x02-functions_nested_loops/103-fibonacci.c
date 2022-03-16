@@ -1,32 +1,25 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ * main - even libber abbaci
  *
- * purpose - fibonacci
- *
- * Return: (0) always
+ * Return: void
  */
-	int main(void)
+int main(void)
+{
+	unsigned int i, j, y, k, s;
+
+	i = 1;
+	j = 2;
+	y = 3;
+	k = 2;
+	for (s = 2; s <= 32; s++)
 	{
-		unsigned long int lim = 4000000;
-		unsigned long int bef = 0;
-		unsigned long int aft = 1;
-		unsigned long int R = 0;
-		unsigned long int sum = 0;
-
-		while (lim > R)
-		{
-			R = bef + aft;
-
-			if ((R % 2) == 0)
-			{
-				sum += R;
-			}
-
-			bef = aft;
-			aft = R;
-		}
-		printf("%li\n", sum);
-		return (0);
+		if (y % 2 == 0)
+			k = k + y;
+		i = j;
+		j = y;
+		y = i + j;
+	}
+	printf("%u\n", k);
+	return (0);
 }

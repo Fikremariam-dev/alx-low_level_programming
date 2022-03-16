@@ -1,21 +1,14 @@
 #include "main.h"
-
 /**
- * print_alphabet - check the code for Holberton School students.
+ * print_alphabet - prints alphabet in lowercase
  *
- * Return: Always 0.
- */
-
+ * Return: Always 0 (Success)
+ **/
 void print_alphabet(void)
 {
-	char alp = 'a';
+	char c;
 
-	while (alp <= 'z')
-	{
-		_putchar (alp);
-		alp++;
-
-	}
-	_putchar ('\n');
-
+	for (c = 'a'; c <= 'z'; c++)
+		_putchar(c);
+	_putchar('\n');
 }
